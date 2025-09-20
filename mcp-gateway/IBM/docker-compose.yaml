@@ -1,0 +1,12 @@
+# Based on: https://github.com/IBM/mcp-context-forge?tab=readme-ov-file#2---persist-sqlite
+services:
+  mcpgateway:
+    image: ghcr.io/ibm/mcp-context-forge:0.7.0
+    volumes:
+      - data:/data
+    ports:
+      - 4444:4444
+    restart: on-failure
+
+volumes:
+  data:
